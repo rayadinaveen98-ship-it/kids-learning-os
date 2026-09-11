@@ -1,5 +1,30 @@
 # Changelog
 
+## 2026-09-11 — Validation Prototype v0.1
+
+Moved Kids Learning OS from product-definition documents into the first executable validation instrument.
+
+Added:
+
+- `prototype/validation-v0.1/index.html` — browser-local interactive subtraction learning loop;
+- `prototype/validation-v0.1/README.md` — field-testing guide, privacy scope and limitations;
+- parent setup for Grade 1/2 and English, Telugu+English, Hindi+English explanation styles;
+- opening problem, prerequisite probe, alternate teaching representations, guided practice and independent transfer check;
+- parent-facing session summary focused on support and independent performance;
+- zero-backend validation architecture: no account, child name, microphone, camera, analytics, external AI calls or uploaded data.
+
+### Purpose
+
+The prototype is not a production UI and not an educational diagnostic. It exists to test whether the core proposition works with real families:
+
+> detect why a child is stuck → teach differently → reduce support → check independent performance → show meaningful evidence to a parent.
+
+### Next milestone
+
+**Direct Family Validation v0.1** — real mobile-browser testing, parent interviews and parent-consented child sessions using the existing validation plan and evidence tracker.
+
+---
+
 ## 2026-09-11 — Product Foundation v1.0 Readiness
 
 Completed the first India-first pre-product research cycle for Kids Learning OS.

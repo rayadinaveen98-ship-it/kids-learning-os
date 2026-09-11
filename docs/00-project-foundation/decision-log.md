@@ -211,21 +211,65 @@ Ages 9–12 and 13–16 remain important long-term research areas, but they are 
 
 ---
 
+## D-018 — After-school learning bridge is the leading launch proposition
+
+**Date:** 2026-09-11  
+**Status:** Product hypothesis — must be validated
+
+**Decision**  
+The leading proposition to test is not a generic tutor or content library. It is an after-school learning bridge for ages 6–8 that starts when a child is stuck, identifies the likely missing prerequisite or misconception, teaches through an appropriate representation/language, fades support, re-checks independent performance and gives the parent plain-language evidence.
+
+**Alternatives retained for testing**  
+A daily foundation coach and a parent learning radar remain credible alternative propositions. They should be tested rather than discarded prematurely.
+
+---
+
+## D-019 — Foundational mathematics is the recommended first validation domain
+
+**Date:** 2026-09-11  
+**Status:** MVP hypothesis — not a permanent company scope
+
+**Decision**  
+Use foundational mathematics as the first narrow domain for validating the Learning OS because prerequisite relationships are relatively explicit, independent mastery can be measured, multiple representations can be tested, and the core loop can operate economically without continuous generative AI.
+
+**Boundary**  
+Kids Learning OS is not defined as a mathematics company. Reading/language is the next major domain if the learning engine validates.
+
+---
+
+## D-020 — MVP exists to prove the learning loop, not feature breadth
+
+**Date:** 2026-09-11  
+**Status:** Locked product-development rule for the validation phase
+
+**Decision**  
+The first functional MVP must prove:
+
+`Diagnose -> Teach -> Practice -> Fade Help -> Independent Check -> Revisit Later -> Parent Evidence`
+
+Do not add broad subjects, avatar worlds, social systems, large content libraries, school administration, live classes or open-ended AI chat before this loop shows measurable value.
+
+---
+
 ## Open decisions
 
-The following remain deliberately unresolved until direct validation/product definition:
+The following remain deliberately unresolved until direct validation/prototyping:
 
-- final first target age/ICP;
-- exact launch problem proposition;
-- MVP subjects (likely foundational reading/math candidates, not locked);
-- exact curriculum relationship and school-material ingestion;
-- parent experience and reporting depth;
+- final first target parent segment/geography;
+- whether homework rescue or daily foundation coaching drives stronger retention;
+- exact first math concept graph;
+- first school board/curriculum mapping;
+- first language pair(s) for pilot;
+- camera/homework OCR scope in V0;
+- voice depth and speech stack;
+- exact session length;
+- visual/game layer;
+- parent-report depth;
 - teacher/school role in V1 vs later;
 - exact gamification model;
 - exact AI providers/models;
 - precise offline implementation;
 - pricing/monetization tiers;
 - technology stack;
-- microphone/camera scope;
 - product name/brand;
-- measurable MVP learning success thresholds.
+- quantitative launch thresholds after prototype evidence.

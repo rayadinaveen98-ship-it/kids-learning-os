@@ -1,6 +1,6 @@
 # Kids Learning OS
 
-**Status:** Pre-product research foundation complete; ready for direct user validation and product definition.
+**Status:** Product Definition v1.0 drafted; direct user validation is the next critical path.
 
 Kids Learning OS is an India-first research and product-development project exploring a new kind of child learning system: one that prioritizes understanding, independent mastery, curiosity, safety, multilingual teaching, and real-world learning over content volume or screen-time engagement.
 
@@ -8,24 +8,19 @@ This repository is the permanent source of truth for the project. Research, prod
 
 ## Current phase
 
-**Product Foundation v1.0 Readiness — research cycle complete**
+**Product Definition + Direct Validation**
 
-The broad desk-research phase is complete enough to stop researching generically and begin direct family validation/product definition.
+The broad desk-research phase is complete. We now have a testable product thesis rather than a generic “all-in-one study app.”
 
-The current leading thesis is **not** “all subjects in one app.” It is a persistent **learning intelligence layer / Learning OS** that can understand:
+### Leading launch hypothesis
 
-- what a child actually knows rather than assuming ability from grade;
-- which prerequisite concepts are missing;
-- how much support the child needs;
-- which representation/language helps with the current concept;
-- whether the child can understand, apply, explain, retain and transfer learning;
-- when AI should guide, hint, verify, explain or stay silent;
-- how school requirements connect with genuine understanding;
-- how curiosity and real-world activity can become part of learning;
-- how parents can understand progress without becoming full-time supervisors;
-- whether support is fading as the child becomes more independent.
+**Ages 6–8 / Grades 1–2**
 
-The strongest first commercial wedge **hypothesis** is currently ages **6–8 / Grades 1–2**, within the broader ages 4–8 Foundational Stage vision. This is not yet an MVP decision; it must survive direct parent/child validation.
+> **A trusted after-school learning bridge that finds why a child is stuck, repairs the missing foundation, fades support, and shows the parent when the child can do it independently.**
+
+The recommended first validation domain is **foundational mathematics** because the prerequisite graph is explicit, independent mastery is measurable, and the learning loop can be tested without requiring constant generative AI.
+
+This remains a hypothesis until direct parent/child validation.
 
 ## Core project principles
 
@@ -60,23 +55,42 @@ The strongest first commercial wedge **hypothesis** is currently ages **6–8 / 
 - [x] Opportunity map and launch-wedge ranking
 - [x] Product Foundation v1.0 readiness synthesis
 
-## Next phase
+## Product definition completed
 
-### Product Definition + Direct Validation
+- [x] Define 2–3 sharp problem propositions
+- [x] Rank the after-school learning bridge as the leading proposition
+- [x] Define ages 6–8 as the leading validation wedge
+- [x] Define foundational mathematics as the first validation domain
+- [x] Define the core learning loop
+- [x] Define a narrow MVP hypothesis
+- [x] Define direct user-validation plan
+- [x] Define the first low-fidelity prototype flow
 
-- [ ] Define 2–3 sharp problem propositions
+## Next critical path
+
+### Direct Validation
+
 - [ ] Interview target parents/caregivers
-- [ ] Test child/parent prototype flows
+- [ ] Observe/test child learning sessions with parent consent
+- [ ] Test diagnosis vs direct explanation
+- [ ] Test English-only vs code-switched teaching
+- [ ] Test homework-rescue vs daily-coach entry points
+- [ ] Test parent mastery report vs score/XP reporting
 - [ ] Validate ages 6–8 as the launch wedge or change it
 - [ ] Validate parent trust around AI/voice/camera
-- [ ] Validate willingness to pay
+- [ ] Validate willingness to pay after real use
 - [ ] Lock Product Thesis v1.0
-- [ ] Define MVP and measurable learning outcomes
+- [ ] Lock MVP scope and measurable learning thresholds
+
+### After validation
+
 - [ ] Define technical architecture
 - [ ] Create production design system
-- [ ] Implement and measure learning
+- [ ] Implement narrow MVP
+- [ ] Measure independent mastery and retention
+- [ ] Expand only after core loop proves value
 
-### Future expansion research — not a blocker for first validation
+### Future expansion research — not a blocker
 
 - [ ] Ages 9–12 deep research
 - [ ] Ages 13–16 deep research
@@ -91,38 +105,29 @@ The strongest first commercial wedge **hypothesis** is currently ages **6–8 / 
 - `docs/03-learning-science/` — learning science and AI pedagogy
 - `docs/04-india/` — privacy, child safety and India operating constraints
 - `docs/05-competitors/` — competitor landscape and deep teardown
-- `docs/06-user-research/` — user research methodology and family-behaviour research
-- `docs/07-product/` — opportunity map, viability and product-foundation synthesis
+- `docs/06-user-research/` — methodology, family research and direct validation plan
+- `docs/07-product/` — opportunity map, product definition, MVP hypothesis and prototype flow
 - `research/` — source registry and evidence logs
 
 ## Key current documents
 
-1. `docs/07-product/product-foundation-v1.0-readiness.md` — overall synthesis and go/no-go research verdict.
-2. `docs/07-product/opportunity-map-v0.7.md` — ranked opportunity areas and launch-wedge analysis.
-3. `docs/07-product/technical-economic-viability-v0.7.md` — Android/offline/AI-cost/business feasibility.
-4. `docs/06-user-research/india-family-life-ages-4-8-v0.3.md` — parent/homework/tuition/shared-device behaviour.
-5. `docs/05-competitors/deep-teardown-v0.3.md` — detailed competitor analysis.
-6. `docs/03-learning-science/learning-science-ai-pedagogy-v0.4.md` — learning principles and AI teaching policy.
-7. `docs/04-india/india-privacy-safety-operating-constraints-v0.4.md` — India child-data and safety constitution.
-8. `research/source-log.md` + `research/source-log-v0.7-additions.md` — evidence provenance.
-
-## Research versioning
-
-- **v0.1:** Broad India market and problem scan
-- **v0.2:** Ages 4–8 / Foundational Stage deep research
-- **v0.3:** Family-life and deep competitor research
-- **v0.4:** Learning science, AI pedagogy, privacy and safety
-- **v0.7:** Technical/economic viability and opportunity map
-- **v1.0 readiness:** Foundation synthesis; ready for direct validation/product definition
+1. `docs/07-product/product-definition-v1.0.md` — current product thesis, JTBD and launch proposition.
+2. `docs/06-user-research/validation-plan-v1.0.md` — interview, observation and prototype-validation program.
+3. `docs/07-product/mvp-hypothesis-v0.1.md` — deliberately narrow first MVP hypothesis.
+4. `docs/07-product/prototype-flow-v0.1.md` — first “I’m stuck” diagnostic-learning flow.
+5. `docs/07-product/product-foundation-v1.0-readiness.md` — research synthesis and readiness verdict.
+6. `docs/07-product/opportunity-map-v0.7.md` — ranked opportunity areas and launch-wedge analysis.
+7. `docs/07-product/technical-economic-viability-v0.7.md` — Android/offline/AI-cost/business feasibility.
+8. `docs/06-user-research/india-family-life-ages-4-8-v0.3.md` — parent/homework/tuition/shared-device behaviour.
+9. `docs/05-competitors/deep-teardown-v0.3.md` — detailed competitor analysis.
+10. `docs/03-learning-science/learning-science-ai-pedagogy-v0.4.md` — learning principles and AI teaching policy.
+11. `docs/04-india/india-privacy-safety-operating-constraints-v0.4.md` — India child-data and safety constitution.
+12. `research/source-log.md` + `research/source-log-v0.7-additions.md` — evidence provenance.
 
 ## Evidence rule
 
-Claims from forums, Reddit, X, app reviews, and anecdotal posts are treated as **signals and hypotheses**, not population-level evidence. Strategic claims are triangulated with stronger sources such as government datasets, academic research, policy documents, large surveys, direct product evidence, and eventually user interviews.
+Claims from forums, Reddit, X, app reviews, and anecdotal posts are treated as **signals and hypotheses**, not population-level evidence. Strategic claims are triangulated with stronger sources such as government datasets, academic research, policy documents, large surveys, direct product evidence, and now direct user validation.
 
-## Current research verdict
+## Current product thesis
 
-The thesis that survived the research cycle is:
-
-> **Build a trusted Learning OS that knows what a child actually understands, repairs the right foundation, teaches in the right language and representation, connects learning to school and the real world, shows parents meaningful evidence, and steadily helps the child need less assistance.**
-
-The next step is not more generic web research. It is to test this thesis with real families and prototypes.
+> **When a child is stuck, Kids Learning OS should identify the missing step, teach it in a way the child understands, reduce help as competence grows, re-check independent performance later, and show the parent meaningful evidence without turning the child into a captive screen user.**

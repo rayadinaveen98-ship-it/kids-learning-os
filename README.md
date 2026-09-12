@@ -1,63 +1,111 @@
 # Kids Learning OS
 
-**Status:** Product Definition v1.0 + Validation Prototype v0.1 complete; direct family validation is now in progress.
+**Status:** Product Definition v1.0 + Validation Prototype v0.2 complete; direct family validation is in progress.
 
-Kids Learning OS is an India-first research and product-development project exploring a new kind of child learning system: one that prioritizes understanding, independent mastery, curiosity, safety, multilingual teaching, and real-world learning over content volume or screen-time engagement.
+Kids Learning OS is an India-first research and product-development project exploring a child learning system that prioritizes understanding, independent mastery, curiosity, safety, multilingual teaching, and real-world learning over content volume or screen-time engagement.
 
-This repository is the permanent source of truth for the project. Research, product philosophy, decisions, hypotheses, sources, architecture, prototypes, and eventual implementation are versioned here.
+This repository is the permanent source of truth for research, product philosophy, decisions, hypotheses, sources, prototypes, architecture, and future implementation.
 
 ## Current phase
 
 **Product Definition + Direct Validation**
 
-The broad desk-research phase is complete. We now have a testable product thesis rather than a generic “all-in-one study app,” plus a lightweight browser prototype for the first child-learning experiment.
+The broad desk-research phase is complete. The current leading launch hypothesis is:
 
-### Leading launch hypothesis
+> **A trusted after-school learning bridge for ages 6–8 / Grades 1–2 that finds why a child is stuck, repairs the missing foundation, fades support, and shows the parent when the child can do it independently.**
 
-**Ages 6–8 / Grades 1–2**
+Foundational mathematics remains the first validation domain because prerequisite relationships are explicit and independent transfer can be measured without requiring constant generative AI.
 
-> **A trusted after-school learning bridge that finds why a child is stuck, repairs the missing foundation, fades support, and shows the parent when the child can do it independently.**
+This remains a hypothesis until direct validation is sufficiently complete.
 
-The recommended first validation domain is **foundational mathematics** because the prerequisite graph is explicit, independent mastery is measurable, and the learning loop can be tested without requiring constant generative AI.
+## Live Validation Prototype v0.2
 
-This remains a hypothesis until direct parent/child validation is sufficiently complete.
+Canonical public URL:
 
-## Validation Prototype v0.1
+https://kids-learning-os-validation.vercel.app
 
-`prototype/validation-v0.1/`
+Source and field protocol:
 
-The first interactive prototype tests one deliberately narrow subtraction loop:
+`prototype/validation-v0.2/`
 
-- parent chooses Grade 1/2 and English, Telugu+English, or Hindi+English explanation style;
-- child attempts `14 − 8` independently;
-- a simple hand-authored branch probes a prerequisite when needed;
-- teaching switches between concrete blocks and bridge-through-10 representation;
-- child practices `13 − 7` with optional support;
-- child completes `15 − 8` with no hints;
-- parent receives a plain-language session summary focused on support and independent performance.
+### What changed from v0.1
 
-The prototype has **no backend, account, child name, camera, microphone, ads, analytics, or external AI calls**. State stays in the browser. It is a validation instrument, not a production UI or diagnostic tool.
+Early anonymized field observations showed:
 
-## First field observations
+- most children appeared to understand the provided hints;
+- some children still struggled;
+- some children used finger counting and took additional time;
+- Grade 1 and Grade 2 were receiving the same question path.
 
-Early anonymized observations from direct use with children/parents are recorded in `docs/06-user-research/direct-family-validation-v0.1-observations.md`.
+Validation v0.2 corrects those issues.
 
-Initial qualitative signals:
+### Grade-aware starting paths
 
-- most children appeared to understand the hints;
-- some children still struggled, indicating a need for deeper/alternative scaffolding;
-- some children used finger counting and took additional time, which is treated as strategy/fluency evidence rather than failure;
-- Validation v0.1 currently gives Grade 1 and Grade 2 the same question path. This was acceptable for testing one generic learning loop, but it is now a known limitation and must change in v0.2.
+**Grade 1**
 
-### Required v0.2 change
+- start: `8 − 3`
+- diagnostic if needed: `5 − 2`
+- practice: `9 − 4`
+- independent transfer: `7 − 3`
 
-Grade should choose the **starting probe**, not permanently lock the child to grade-level difficulty.
+**Grade 2**
 
-- Grade 1 should begin with a smaller-range foundational subtraction path and concrete support.
-- Grade 2 should begin with two-digit/place-value-aware subtraction situations.
-- Children should be able to route backward to prerequisites or forward to harder items based on demonstrated ability.
+- start: `34 − 8`
+- diagnostic if needed: `14 − 8`
+- practice: `43 − 7`
+- independent transfer: `52 − 8`
 
-This preserves the core principle: **ability > grade label.**
+The governing principle is:
+
+> **Grade chooses the starting point. Demonstrated ability determines where the child goes next.**
+
+A Grade 2 child can step backward to a concrete prerequisite. A stronger child can remain on the grade-level path.
+
+### Strategy evidence
+
+v0.2 records the child-reported approach to the first problem:
+
+- fingers;
+- mental counting;
+- breaking the number apart;
+- remembered / just knew;
+- drawing or imagined objects;
+- not sure.
+
+Finger counting and slower responses are treated as useful strategy/fluency evidence, not automatic failure. Time is shown to the parent only as context and is not scored.
+
+### Scaffolding
+
+v0.2 introduces two hint levels rather than one:
+
+1. lighter conceptual/verbal prompt;
+2. stronger visual or worked-step support.
+
+This lets field testing observe how much support was actually required.
+
+### Privacy
+
+The prototype contains:
+
+- no backend database;
+- no account;
+- no child name;
+- no camera or microphone;
+- no analytics SDK;
+- no external AI calls;
+- no ads or child-facing monetization.
+
+It is a validation instrument, not a production assessment or diagnostic tool.
+
+## Direct validation evidence
+
+First anonymized field patterns are recorded in:
+
+`docs/06-user-research/direct-family-validation-v0.1-observations.md`
+
+Validation tracking continues in GitHub Issue #2.
+
+No individual child/parent reviews or identifying data are required in this public repository. Aggregate patterns are enough to guide product decisions.
 
 ## Core project principles
 
@@ -78,97 +126,84 @@ This preserves the core principle: **ability > grade label.**
 15. Child mode never sells.
 16. Shared-device/offline India realities are architecture constraints, not edge cases.
 
-## Research completed
+## Foundation completed
 
-- [x] Broad India education and EdTech landscape scan
+- [x] Broad India education and EdTech landscape research
 - [x] Parent/student/teacher problem map
-- [x] Ages 4–8 Foundational Stage deep research
+- [x] Ages 4–8 Foundational Stage research
 - [x] India family-life / homework / tuition / device research
-- [x] Foundational-learning and learning-science synthesis
-- [x] Detailed competitor teardown
+- [x] Learning-science synthesis
+- [x] Competitor teardown
 - [x] Child-AI safety and India privacy constraints
-- [x] Shared-device / offline / Android operating constraints
-- [x] AI technical and economic viability analysis
+- [x] Android/shared-device/offline operating constraints
+- [x] AI technical/economic viability analysis
 - [x] Opportunity map and launch-wedge ranking
-- [x] Product Foundation v1.0 readiness synthesis
+- [x] Product Foundation v1.0 readiness
+- [x] Product Definition v1.0 hypothesis
+- [x] Direct-validation plan and interview kit
+- [x] Validation Prototype v0.1
+- [x] First anonymized field observations
+- [x] Validation Prototype v0.2
+- [x] Public v0.2 deployment
 
-## Product definition completed
+## Current critical path
 
-- [x] Define 2–3 sharp problem propositions
-- [x] Rank the after-school learning bridge as the leading proposition
-- [x] Define ages 6–8 as the leading validation wedge
-- [x] Define foundational mathematics as the first validation domain
-- [x] Define the core learning loop
-- [x] Define a narrow MVP hypothesis
-- [x] Define direct user-validation plan
-- [x] Define the first low-fidelity prototype flow
-- [x] Publish Validation Prototype v0.1
-- [x] Record first anonymized field observations
+### Direct Validation v0.2
 
-## Next critical path
-
-### Direct Validation + Prototype v0.2
-
-- [ ] Create grade-aware starting probes
-- [ ] Add deeper fallback scaffolding for children who still struggle
-- [ ] Continue target parent/caregiver interviews
-- [ ] Continue parent-consented child learning sessions
-- [ ] Test English-only vs code-switched teaching
+- [ ] Run v0.2 on at least three real mobile browser/device combinations
+- [ ] Continue parent/caregiver interviews
+- [ ] Continue parent-consented child sessions
+- [ ] Compare Grade 1 vs Grade 2 starting difficulty
+- [ ] Observe strategy use: fingers / counting / decomposition / objects
+- [ ] Measure which hint level is required
+- [ ] Observe Grade 2 prerequisite step-back behavior
+- [ ] Track independent transfer outcome
+- [ ] Test English-only vs code-switched explanations
 - [ ] Test homework-rescue vs daily-coach entry points
 - [ ] Test parent mastery report vs score/XP reporting
-- [ ] Validate ages 6–8 as the launch wedge or change it
-- [ ] Validate parent trust around AI/voice/camera
 - [ ] Validate willingness to pay after real use
+- [ ] Write Validation v0.2 findings
+- [ ] Decide proceed / modify wedge / stop
 - [ ] Lock Product Thesis v1.0
 - [ ] Lock MVP scope and measurable learning thresholds
 
-### After validation
+## After validation
 
 - [ ] Define technical architecture
 - [ ] Create production design system
-- [ ] Implement narrow MVP
+- [ ] Implement narrow Android MVP
+- [ ] Produce installable APK milestones
+- [ ] Pilot with real families
 - [ ] Measure independent mastery and retention
-- [ ] Expand only after core loop proves value
+- [ ] Expand only after the core loop proves value
 
-### Future expansion research — not a blocker
+## Future expansion research — not a blocker
 
 - [ ] Ages 9–12 deep research
 - [ ] Ages 13–16 deep research
 - [ ] Teacher/school B2B research
 - [ ] International curriculum expansion research
 
-## Repository structure
+## Key documents
 
-- `docs/00-project-foundation/` — philosophy, principles, decision log
-- `docs/01-market-research/` — India landscape and broad problem research
-- `docs/02-age-research/` — age-specific foundational research
-- `docs/03-learning-science/` — learning science and AI pedagogy
-- `docs/04-india/` — privacy, child safety and India operating constraints
-- `docs/05-competitors/` — competitor landscape and deep teardown
-- `docs/06-user-research/` — methodology, family research and direct validation plan
-- `docs/07-product/` — opportunity map, product definition, MVP hypothesis and prototype flow
-- `research/` — source registry and evidence logs
-
-## Key current documents
-
-1. `docs/07-product/product-definition-v1.0.md` — current product thesis, JTBD and launch proposition.
-2. `docs/06-user-research/validation-plan-v1.0.md` — interview, observation and prototype-validation program.
-3. `docs/06-user-research/direct-family-validation-v0.1-observations.md` — first anonymized field patterns.
-4. `docs/07-product/mvp-hypothesis-v0.1.md` — deliberately narrow first MVP hypothesis.
-5. `docs/07-product/prototype-flow-v0.1.md` — first “I’m stuck” diagnostic-learning flow.
-6. `docs/07-product/product-foundation-v1.0-readiness.md` — research synthesis and readiness verdict.
-7. `docs/07-product/opportunity-map-v0.7.md` — ranked opportunity areas and launch-wedge analysis.
-8. `docs/07-product/technical-economic-viability-v0.7.md` — Android/offline/AI-cost/business feasibility.
-9. `docs/06-user-research/india-family-life-ages-4-8-v0.3.md` — parent/homework/tuition/shared-device behaviour.
-10. `docs/05-competitors/deep-teardown-v0.3.md` — detailed competitor analysis.
-11. `docs/03-learning-science/learning-science-ai-pedagogy-v0.4.md` — learning principles and AI teaching policy.
-12. `docs/04-india/india-privacy-safety-operating-constraints-v0.4.md` — India child-data and safety constitution.
-13. `research/source-log.md` + `research/source-log-v0.7-additions.md` — evidence provenance.
+- `docs/07-product/product-definition-v1.0.md`
+- `docs/06-user-research/validation-plan-v1.0.md`
+- `docs/06-user-research/direct-family-validation-v0.1-observations.md`
+- `prototype/validation-v0.2/README.md`
+- `prototype/validation-v0.2/DEPLOYMENT.md`
+- `docs/07-product/mvp-hypothesis-v0.1.md`
+- `docs/07-product/product-foundation-v1.0-readiness.md`
+- `docs/07-product/opportunity-map-v0.7.md`
+- `docs/07-product/technical-economic-viability-v0.7.md`
+- `docs/05-competitors/deep-teardown-v0.3.md`
+- `docs/03-learning-science/learning-science-ai-pedagogy-v0.4.md`
+- `docs/04-india/india-privacy-safety-operating-constraints-v0.4.md`
+- `research/source-log.md`
 
 ## Evidence rule
 
-Claims from forums, Reddit, X, app reviews, and anecdotal posts are treated as **signals and hypotheses**, not population-level evidence. Strategic claims are triangulated with stronger sources such as government datasets, academic research, policy documents, large surveys, direct product evidence, and now direct user validation.
+Forums, Reddit, app reviews, and anecdotes are treated as signals rather than population-level evidence. Direct family feedback is stored as anonymized patterns unless participants explicitly authorize otherwise.
 
 ## Current product thesis
 
-> **When a child is stuck, Kids Learning OS should identify the missing step, teach it in a way the child understands, reduce help as competence grows, re-check independent performance later, and show the parent meaningful evidence without turning the child into a captive screen user.**
+> **When a child is stuck, Kids Learning OS should identify the missing step, teach it in a way the child understands, reduce help as competence grows, re-check independent performance, and show the parent meaningful evidence without turning the child into a captive screen user.**

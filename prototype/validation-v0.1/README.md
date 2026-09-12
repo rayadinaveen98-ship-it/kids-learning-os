@@ -32,12 +32,39 @@ This is not a production app and not a diagnostic tool.
 
 The prototype runs entirely in the browser. Session state is stored only in browser `localStorage` so a family can resume on the same device. Nothing is uploaded anywhere.
 
+## First anonymized field observations
+
+Early direct use with children/parents produced these qualitative patterns:
+
+- most children appeared to understand the hints;
+- some children still struggled, indicating that one hint path is not enough for everyone;
+- some children used their fingers to count and took more time;
+- finger counting / slow correct performance should be treated as strategy and fluency evidence, not automatic failure.
+
+Full notes are stored in `docs/06-user-research/direct-family-validation-v0.1-observations.md`.
+
+## Known grade-path limitation
+
+The Grade 1 and Grade 2 selectors currently lead to the **same subtraction sequence** (`14 − 8`, `13 − 7`, `15 − 8`).
+
+This was intentional for v0.1 because the purpose was to validate the generic diagnosis → scaffold → independent-check loop rather than curriculum differentiation.
+
+It should **not** remain this way in v0.2.
+
+### Required v0.2 change
+
+- Grade 1: start with smaller-range foundational subtraction and concrete support.
+- Grade 2: start with two-digit/place-value-aware subtraction situations.
+- Both paths must remain adaptive: route backward to prerequisites when needed and forward when mastery is demonstrated.
+
+**Grade should select the starting probe; actual demonstrated ability should control the next step.**
+
 ## How to test
 
 1. Parent selects grade and preferred explanation language.
 2. Parent hands the device to the child.
 3. Adult should avoid explaining unless the child is distressed or asks to stop.
-4. Observe where the child hesitates, guesses, asks for help, or understands immediately.
+4. Observe where the child hesitates, guesses, counts on fingers, asks for help, or understands immediately.
 5. Let the prototype complete its own teaching sequence.
 6. Review the parent summary at the end.
 7. Interview the parent *after* the session using `docs/06-user-research/recruitment-and-interview-kit-v1.0.md`.
@@ -49,6 +76,7 @@ Use `research/interview-tracker-template.csv` and note:
 - first answer;
 - whether the child understood the wording;
 - where help was needed;
+- strategy used (mental, finger counting, objects, counting back, decomposition, etc.);
 - whether the representation helped;
 - independent-check result;
 - total session length;

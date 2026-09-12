@@ -1,6 +1,6 @@
 # Kids Learning OS
 
-**Status:** Product Definition v1.0 + Validation Prototype v0.1 complete; direct family validation is the next critical path.
+**Status:** Product Definition v1.0 + Validation Prototype v0.1 complete; direct family validation is now in progress.
 
 Kids Learning OS is an India-first research and product-development project exploring a new kind of child learning system: one that prioritizes understanding, independent mastery, curiosity, safety, multilingual teaching, and real-world learning over content volume or screen-time engagement.
 
@@ -20,7 +20,7 @@ The broad desk-research phase is complete. We now have a testable product thesis
 
 The recommended first validation domain is **foundational mathematics** because the prerequisite graph is explicit, independent mastery is measurable, and the learning loop can be tested without requiring constant generative AI.
 
-This remains a hypothesis until direct parent/child validation.
+This remains a hypothesis until direct parent/child validation is sufficiently complete.
 
 ## Validation Prototype v0.1
 
@@ -37,6 +37,27 @@ The first interactive prototype tests one deliberately narrow subtraction loop:
 - parent receives a plain-language session summary focused on support and independent performance.
 
 The prototype has **no backend, account, child name, camera, microphone, ads, analytics, or external AI calls**. State stays in the browser. It is a validation instrument, not a production UI or diagnostic tool.
+
+## First field observations
+
+Early anonymized observations from direct use with children/parents are recorded in `docs/06-user-research/direct-family-validation-v0.1-observations.md`.
+
+Initial qualitative signals:
+
+- most children appeared to understand the hints;
+- some children still struggled, indicating a need for deeper/alternative scaffolding;
+- some children used finger counting and took additional time, which is treated as strategy/fluency evidence rather than failure;
+- Validation v0.1 currently gives Grade 1 and Grade 2 the same question path. This was acceptable for testing one generic learning loop, but it is now a known limitation and must change in v0.2.
+
+### Required v0.2 change
+
+Grade should choose the **starting probe**, not permanently lock the child to grade-level difficulty.
+
+- Grade 1 should begin with a smaller-range foundational subtraction path and concrete support.
+- Grade 2 should begin with two-digit/place-value-aware subtraction situations.
+- Children should be able to route backward to prerequisites or forward to harder items based on demonstrated ability.
+
+This preserves the core principle: **ability > grade label.**
 
 ## Core project principles
 
@@ -81,17 +102,17 @@ The prototype has **no backend, account, child name, camera, microphone, ads, an
 - [x] Define a narrow MVP hypothesis
 - [x] Define direct user-validation plan
 - [x] Define the first low-fidelity prototype flow
-- [x] Build Validation Prototype v0.1
-- [x] Prepare parent recruitment/interview kit and tracking template
+- [x] Publish Validation Prototype v0.1
+- [x] Record first anonymized field observations
 
 ## Next critical path
 
-### Direct Validation
+### Direct Validation + Prototype v0.2
 
-- [ ] Test Validation Prototype v0.1 on real mobile browsers
-- [ ] Interview target parents/caregivers
-- [ ] Observe/test child learning sessions with parent consent
-- [ ] Test diagnosis vs direct explanation
+- [ ] Create grade-aware starting probes
+- [ ] Add deeper fallback scaffolding for children who still struggle
+- [ ] Continue target parent/caregiver interviews
+- [ ] Continue parent-consented child learning sessions
 - [ ] Test English-only vs code-switched teaching
 - [ ] Test homework-rescue vs daily-coach entry points
 - [ ] Test parent mastery report vs score/XP reporting
@@ -126,26 +147,23 @@ The prototype has **no backend, account, child name, camera, microphone, ads, an
 - `docs/05-competitors/` — competitor landscape and deep teardown
 - `docs/06-user-research/` — methodology, family research and direct validation plan
 - `docs/07-product/` — opportunity map, product definition, MVP hypothesis and prototype flow
-- `prototype/validation-v0.1/` — first browser-local validation prototype
-- `research/` — source registry, evidence logs, and interview tracker
+- `research/` — source registry and evidence logs
 
 ## Key current documents
 
 1. `docs/07-product/product-definition-v1.0.md` — current product thesis, JTBD and launch proposition.
 2. `docs/06-user-research/validation-plan-v1.0.md` — interview, observation and prototype-validation program.
-3. `docs/07-product/mvp-hypothesis-v0.1.md` — deliberately narrow first MVP hypothesis.
-4. `docs/07-product/prototype-flow-v0.1.md` — first “I’m stuck” diagnostic-learning flow.
-5. `prototype/validation-v0.1/index.html` — interactive browser validation instrument.
-6. `prototype/validation-v0.1/README.md` — field-testing guide and prototype limitations.
-7. `docs/06-user-research/recruitment-and-interview-kit-v1.0.md` — direct parent research kit.
-8. `research/interview-tracker-template.csv` — structured evidence tracker.
-9. `docs/07-product/product-foundation-v1.0-readiness.md` — research synthesis and readiness verdict.
-10. `docs/07-product/opportunity-map-v0.7.md` — ranked opportunity areas and launch-wedge analysis.
-11. `docs/07-product/technical-economic-viability-v0.7.md` — Android/offline/AI-cost/business feasibility.
-12. `docs/05-competitors/deep-teardown-v0.3.md` — detailed competitor analysis.
-13. `docs/03-learning-science/learning-science-ai-pedagogy-v0.4.md` — learning principles and AI teaching policy.
-14. `docs/04-india/india-privacy-safety-operating-constraints-v0.4.md` — India child-data and safety constitution.
-15. `research/source-log.md` + `research/source-log-v0.7-additions.md` — evidence provenance.
+3. `docs/06-user-research/direct-family-validation-v0.1-observations.md` — first anonymized field patterns.
+4. `docs/07-product/mvp-hypothesis-v0.1.md` — deliberately narrow first MVP hypothesis.
+5. `docs/07-product/prototype-flow-v0.1.md` — first “I’m stuck” diagnostic-learning flow.
+6. `docs/07-product/product-foundation-v1.0-readiness.md` — research synthesis and readiness verdict.
+7. `docs/07-product/opportunity-map-v0.7.md` — ranked opportunity areas and launch-wedge analysis.
+8. `docs/07-product/technical-economic-viability-v0.7.md` — Android/offline/AI-cost/business feasibility.
+9. `docs/06-user-research/india-family-life-ages-4-8-v0.3.md` — parent/homework/tuition/shared-device behaviour.
+10. `docs/05-competitors/deep-teardown-v0.3.md` — detailed competitor analysis.
+11. `docs/03-learning-science/learning-science-ai-pedagogy-v0.4.md` — learning principles and AI teaching policy.
+12. `docs/04-india/india-privacy-safety-operating-constraints-v0.4.md` — India child-data and safety constitution.
+13. `research/source-log.md` + `research/source-log-v0.7-additions.md` — evidence provenance.
 
 ## Evidence rule
 
